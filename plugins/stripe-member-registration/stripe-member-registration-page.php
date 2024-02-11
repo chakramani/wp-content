@@ -64,7 +64,6 @@ function highup_registration_form_submission()
             $insert_data = highup_store_registration_data($first_name, $last_name, $email, $phone, NULL);
             $payment_intent_id = highup_process_stripe_payment();
 
-            // Store registration and payment data in the database
             
         }
     }
@@ -123,7 +122,8 @@ function highup_store_registration_data($first_name, $last_name, $email, $phone,
 }
 
 
-add_shortcode('test', function () {
+add_shortcode('stripe_paymet_success','stripe_paymet_success' );
+function stripe_paymet_success() {
     session_start();
     require_once plugin_dir_path(__FILE__) . 'stripe-php/init.php';
 
@@ -155,4 +155,4 @@ add_shortcode('test', function () {
         http_response_code(500);
         echo json_encode(['error' => $e->getMessage()]);
     }
-});
+}

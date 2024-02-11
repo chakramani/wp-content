@@ -68,33 +68,37 @@ function multi_stripe_setting_page()
 function stripe_history_page_callback()
 {
     global $wpdb;
-    $query = "SELECT * FROM {$wpdb->prefix}stripe_member_registration";
+    $query = "SELECT * FROM {$wpdb->prefix}stripe_member_registration WHERE payment_intent_id IS NOT NULL";
     $results = $wpdb->get_results($query);
 ?>
 
     <div class="container">
-        <h1>Responsive Table</h1>
+        <h1>User Transaction Table</h1>
         <table class="rwd-table">
             <tbody>
                 <tr>
-                    <th>ID</th>
+                    <th>S.N.</th>
                     <th>First Name</th>
                     <th>Last Number</th>
+                    <th>Email</th>
                     <th>Phone</th>
                     <th>Paid Amount</th>
                     <th>Transactin ID</th>
                     <th>Created At</th>
                 </tr>
-                <?php foreach ($results as $result) : ?>
+                <?php foreach ($results as $key => $result) : ?>
                     <tr>
                         <td data-th="Supplier Code">
-                            <?php echo $result->id; ?>
+                            <?php echo ++$key; ?>
                         </td>
                         <td data-th="First Name">
                             <?php echo $result->first_name; ?>
                         </td>
                         <td data-th="last Number">
                             <?php echo $result->last_name; ?>
+                        </td>
+                        <td data-th="Email">
+                            <?php echo $result->email; ?>
                         </td>
                         <td data-th="Phone">
                             <?php echo $result->phone; ?>
