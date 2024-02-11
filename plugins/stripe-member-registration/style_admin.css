@@ -1,0 +1,274 @@
+h1 {
+  color: #fff;
+  font-size: 64px;
+  text-align: center;
+  line-height: 200px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 50px auto;
+}
+
+.main {
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  background: #fff;
+  margin-left: 3%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.main__header {
+  padding: 20px;
+  border-bottom: 1px solid #f0f1f2;
+}
+
+.main__content {
+  padding: 20px 20px;
+}
+
+.main__settings-form {
+  max-width: 100%;
+  display: block;
+  /* margin: 0 auto; */
+}
+
+.main__input-label {
+  font-size: 80%;
+  color: #c4c1c9;
+  display: block;
+  margin: 5px 5px 5px 5px;
+}
+
+.main__input {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #f1f3f5;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 15px;
+  border-radius: 3px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.main__input:focus {
+  border: 1px solid #348aa7;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+  padding: 15px 25px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.main__save-button {
+  color: #fff;
+  background-color: #8ed081;
+}
+.main__save-button:hover {
+  background-color: #6dc25c;
+  cursor: pointer;
+}
+
+.main__cancel-button {
+  color: #fff;
+  background: #ccc;
+}
+.main__cancel-button:hover {
+  background-color: #b3b3b3;
+  cursor: pointer;
+}
+
+@media (max-width: 764px) {
+  .main {
+    width: 100%;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+}
+
+.default-payment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* table css */
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.rwd-table {
+  margin: auto;
+  min-width: 300px;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.rwd-table tr:first-child {
+  border-top: none;
+  background: #428bca;
+  color: #fff;
+}
+
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.rwd-table th {
+  display: none;
+}
+
+.rwd-table td {
+  display: block;
+}
+
+.rwd-table td:first-child {
+  margin-top: 0.5em;
+}
+
+.rwd-table td:last-child {
+  margin-bottom: 0.5em;
+}
+
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+  text-align: left;
+}
+
+.rwd-table {
+  color: #333;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+  padding: 0.5em 1em;
+}
+@media screen and (max-width: 601px) {
+  .rwd-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .rwd-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    padding: 1em !important;
+  }
+}
+
+/* THE END OF THE IMPORTANT STUFF */
+
+/* Basic Styling */
+body {
+  background: #4b79a1;
+  background: -webkit-linear-gradient(to left, #4b79a1, #283e51);
+  background: linear-gradient(to left, #4b79a1, #283e51);
+}
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  color: #f2f2f2;
+}
+.container {
+  display: block;
+  text-align: center;
+}
+h3 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  color: #cecece;
+}
+h3:before {
+  content: "\25C0";
+  position: absolute;
+  left: -50px;
+  -webkit-animation: leftRight 2s linear infinite;
+  animation: leftRight 2s linear infinite;
+}
+h3:after {
+  content: "\25b6";
+  position: absolute;
+  right: -50px;
+  -webkit-animation: leftRight 2s linear infinite reverse;
+  animation: leftRight 2s linear infinite reverse;
+}
+@-webkit-keyframes leftRight {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-10px);
+  }
+  75% {
+    -webkit-transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes leftRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
